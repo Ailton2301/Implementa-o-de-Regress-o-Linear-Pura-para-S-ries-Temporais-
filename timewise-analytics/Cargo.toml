@@ -1,0 +1,28 @@
+[package]
+name = "timewise-analytics"
+version = "0.1.0"
+edition = "2024"
+description = "Implementação pura de regressão linear para análise de séries temporais"
+authors = ["TimeWise Analytics Team"]
+license = "MIT"
+repository = "https://github.com/timewise-analytics/linear-regression-rs"
+readme = "README.md"
+keywords = ["regression", "linear", "time-series", "analytics", "statistics"]
+categories = ["science", "data-structures", "algorithms"]
+
+[dependencies]
+# Nenhuma dependência externa - implementação pura
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+debug = false
+
+[profile.test]
+opt-level = 0
+debug = true
